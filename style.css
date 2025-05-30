@@ -4,23 +4,27 @@ body {
     margin: 0;
     padding: 20px;
 }
+
 h1 {
     text-align: center;
     color: #333;
 }
+
 form {
     background: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: fit
     margin: 0 auto;
     padding-right: 20px;
+    max-width: 750px;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 input[type="text"],
@@ -31,8 +35,8 @@ input[type="number"] {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-left: 0px;
-    max-width: 630px;
+    margin-left: -10px;
+    max-width: 750px;
 }
 
 input[type="submit"] {
@@ -42,21 +46,24 @@ input[type="submit"] {
     padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
-    float: left;
     margin-right: 10px;
+    /* Espaço entre submit e reset */
 }
 
 input[type="submit"]:hover {
     background: #4cae4c;
 }
+
 input[type="submit"]:active {
     background: #449d44;
 }
+
 input[type="submit"]:disabled {
     background: #ccc;
     cursor: not-allowed;
 }
-input[type ="reset"] {
+
+input[type="reset"] {
     background: #d9534f;
     color: white;
     border: none;
@@ -65,7 +72,8 @@ input[type ="reset"] {
     cursor: pointer;
     display: inline-block;
 }
-input[type ="reset"]:hover {
+
+input[type="reset"]:hover {
     background: #c9302c;
 }
 
@@ -75,12 +83,31 @@ input[type ="reset"]:hover {
     text-align: center;
     margin-bottom: 20px;
 }
-.form-title > h1 {
+
+.form-title>h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
-.form-title > p {
+
+.form-title>p {
     font-size: 12px;
     color: #333;
     font-weight: bold;
+}
+
+.form-button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    padding: 0;
+}
+
+.tool-group {
+    margin-bottom: 10px;
+
+}
+.tool-quantity {
+    margin-left: 25px;
+    margin-top: 5px;
 }

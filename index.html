@@ -11,39 +11,309 @@
 <body>
     <form action="#" method="post">
         <h1 class="form-title">Formulário de Cadastro</h1>
-        <p class="form-title">Preencha os campos abaixo para se cadastrar:</p>
+        <p class="form-title">Preencha os campos abaixo para se cadastrar</p>
        <!-- entrys for user information -->
         <div id="name-input">
-            <label for="name">Nome:</label>
+            <label for="name">Nome</label>
             <input type="text" id="name" name="name" required>
         </div>
         <div id="email-input">
-            <label for="email">E-mail:</label>
+            <label for="email">E-mail</label>
             <input type="email" id="email" name="email" required>
         </div>
         <div id="age-input">
-            <label for="age">Idade:</label>
+            <label for="age">Idade</label>
             <input type="number" id="age" name="age" required>
         </div>
         <div id="address-input">
-            <label for="address">Endereço:</label>
+            <label for="address">Endereço</label>
             <input type="text" id="address" name="address" required>
         </div>
-        <h1>Itens</h1>
+    <!-- Entrys for itens  -->
+        <h1>Materiais</h1>
         <div>
-            <label for="item-quantity">Quantidade de Brita em M3:</label>
-            <input type="number" id="item-quantity" name="item-quantity" required>
+            <label for="tijolos-quantity">Tijolos</label>
+            <input type="number" id="tijolos-quantity" name="tijolos" required>
         </div>
+        <div>
+            <label for="areia-quantity">Areia</label>
+            <input type="number" id="areia-quantity" name="areia" required>
+        </div>
+        <div>
+            <label for="cimento-quantity">Cimento</label>
+            <input type="number" id="cimento-quantity" name="cimento" required>
+        </div>
+        <div>
+            <label for="brita-quantity">Quantidade de Brita em M3</label>
+            <input type="number" id="brita-quantity" name="brita" required>
+        </div>
+        <div>
+            <label for="madeira-quantity">Madeira</label>
+            <input type="number" id="madeira-quantity" name="madeira" required>
+        </div>
+        <div>
+            <label for="telhas-quantity">Telhas</label>
+            <input type="number" id="telhas-quantity" name="telhas" required>
+        </div>
+        <div>
+            <label for="pregos-quantity">Pregos</label>
+            <input type="number" id="pregos-quantity" name="pregos" required>
+        </div>
+        <div>
+            <label for="malha-quantity">Malha</label>
+            <input type="number" id="malha-quantity" name="malha" required>
+        </div>
+        <div>
+            <label for="aterro-quantity">Aterro</label>
+            <input type="number" id="aterro-quantity" name="aterro" required>
+        </div>
+        <div>
+            <label for="vergalhao-quantity">Vergalhão</label>
+            <input type="number" id="vergalhao-quantity" name="vergalhao" required>
+        </div>
+        <div>
+            <label for="armacao-quantity">Armação</label>
+            <input type="number" id="armacao-quantity" name="armacao" required>
+        </div>
+        <div>
+            <label for="calha-quantity">Calha</label>
+            <input type="number" id="calha-quantity" name="calha" required>
+        </div>
+        <div>
+            <label for="rufos-quantity">Rufos</label>
+            <input type="number" id="rufos-quantity" name="rufos" required>
+        </div>
+        <!-- entry for Tools to be used -->
+        <h1>Ferramentas</h1>
 
-       <!-- reset and submit buttons -->
-        <div id="submit-button">
-            <input type="submit" value="Enviar">
-        </div>
-        <div id="reset-button">
-            <input type="reset" value="Limpar">
-    </form>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-pa">
+        Pá
+    </label>
+    <div class="tool-quantity" id="tool-quantity-pa" style="display:none;">
+        <label for="pa-quantity">Quantidade:</label>
+        <input type="number" id="pa-quantity" name="pa-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-enxada">
+        Enxada
+    </label>
+    <div class="tool-quantity" id="tool-quantity-enxada" style="display:none;">
+        <label for="enxada-quantity">Quantidade:</label>
+        <input type="number" id="enxada-quantity" name="enxada-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-carrinho">
+        Carrinho de mão
+    </label>
+    <div class="tool-quantity" id="tool-quantity-carrinho" style="display:none;">
+        <label for="carrinho-quantity">Quantidade:</label>
+        <input type="number" id="carrinho-quantity" name="carrinho-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-nivelador">
+        Nivelador
+    </label>
+    <div class="tool-quantity" id="tool-quantity-nivelador" style="display:none;">
+        <label for="nivelador-quantity">Quantidade:</label>
+        <input type="number" id="nivelador-quantity" name="nivelador-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-prumo">
+        Prumo
+    </label>
+    <div class="tool-quantity" id="tool-quantity-prumo" style="display:none;">
+        <label for="prumo-quantity">Quantidade:</label>
+        <input type="number" id="prumo-quantity" name="prumo-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-martelete">
+        Martelete
+    </label>
+    <div class="tool-quantity" id="tool-quantity-martelete" style="display:none;">
+        <label for="martelete-quantity">Quantidade:</label>
+        <input type="number" id="martelete-quantity" name="martelete-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-martelo">
+        Martelo
+    </label>
+    <div class="tool-quantity" id="tool-quantity-martelo" style="display:none;">
+        <label for="martelo-quantity">Quantidade:</label>
+        <input type="number" id="martelo-quantity" name="martelo-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-betoneira">
+        Betoneira
+    </label>
+    <div class="tool-quantity" id="tool-quantity-betoneira" style="display:none;">
+        <label for="betoneira-quantity">Quantidade:</label>
+        <input type="number" id="betoneira-quantity" name="betoneira-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-espatula">
+        Espátula
+    </label>
+    <div class="tool-quantity" id="tool-quantity-espatula" style="display:none;">
+        <label for="espatula-quantity">Quantidade:</label>
+        <input type="number" id="espatula-quantity" name="espatula-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-colher">
+        Colher de pedreiro
+    </label>
+    <div class="tool-quantity" id="tool-quantity-colher" style="display:none;">
+        <label for="colher-quantity">Quantidade:</label>
+        <input type="number" id="colher-quantity" name="colher-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-desempenadeira">
+        Desempenadeira
+    </label>
+    <div class="tool-quantity" id="tool-quantity-desempenadeira" style="display:none;">
+        <label for="desempenadeira-quantity">Quantidade:</label>
+        <input type="number" id="desempenadeira-quantity" name="desempenadeira-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-linha">
+        Linha de pedreiro
+    </label>
+    <div class="tool-quantity" id="tool-quantity-linha" style="display:none;">
+        <label for="linha-quantity">Quantidade:</label>
+        <input type="number" id="linha-quantity" name="linha-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-esquadro">
+        Esquadro
+    </label>
+    <div class="tool-quantity" id="tool-quantity-esquadro" style="display:none;">
+        <label for="esquadro-quantity">Quantidade:</label>
+        <input type="number" id="esquadro-quantity" name="esquadro-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-trena">
+        Trena
+    </label>
+    <div class="tool-quantity" id="tool-quantity-trena" style="display:none;">
+        <label for="trena-quantity">Quantidade:</label>
+        <input type="number" id="trena-quantity" name="trena-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-serrote">
+        Serrote
+    </label>
+    <div class="tool-quantity" id="tool-quantity-serrote" style="display:none;">
+        <label for="serrote-quantity">Quantidade:</label>
+        <input type="number" id="serrote-quantity" name="serrote-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-makita">
+        Makita
+    </label>
+    <div class="tool-quantity" id="tool-quantity-makita" style="display:none;">
+        <label for="makita-quantity">Quantidade:</label>
+        <input type="number" id="makita-quantity" name="makita-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-alicate">
+        Alicate
+    </label>
+    <div class="tool-quantity" id="tool-quantity-alicate" style="display:none;">
+        <label for="alicate-quantity">Quantidade:</label>
+        <input type="number" id="alicate-quantity" name="alicate-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-serras">
+        Serras
+    </label>
+    <div class="tool-quantity" id="tool-quantity-serras" style="display:none;">
+        <label for="serras-quantity">Quantidade:</label>
+        <input type="number" id="serras-quantity" name="serras-quantity" min="1">
+    </div>
+</div>
+<div class="tool-group">
+    <label>
+        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-escada">
+        Escada
+    </label>
+    <div class="tool-quantity" id="tool-quantity-escada" style="display:none;">
+        <label for="escada-quantity">Quantidade:</label>
+        <input type="number" id="escada-quantity" name="escada-quantity" min="1">
+    </div>
+</div>
         
+       <!-- reset and submit buttons -->
+       <div class="form-button">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+    <script>
+document.querySelectorAll('.tool-checkbox').forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+        const target = document.getElementById(this.dataset.target);
+        if (this.checked) {
+            target.style.display = 'block';
+        } else {
+            target.style.display = 'none';
+            target.querySelector('input[type="number"]').value = '';
+        }
+    });
+});
 
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    // Gera e baixa o arquivo JSON
+    const blob = new Blob([JSON.stringify(data, null, 2)], {type : 'application/json'});
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'formulario.json';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+</script>
 </body>
 
 </html>
