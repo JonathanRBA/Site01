@@ -62,13 +62,14 @@ form {
     margin-bottom: 12px;
 }
 
+/* Garante que o botão de adicionar tenha a mesma altura do input de texto */
 .input-row input[type="text"] {
-    height: 40px; /* Ajuste conforme necessário */
+    height: 40px;
 }
 
 .input-row .add-btn {
-    height: 40px; 
-    margin-bottom: 0; 
+    height: 40px;
+    margin-bottom: 0;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -81,9 +82,16 @@ form {
     margin-bottom: 6px;
 }
 
-.item-quantity {
-    width: 60px;
-    padding: 4px 6px;
+/* Garante que o botão remover tenha a mesma altura do input de quantidade */
+.item-row .item-quantity {
+    height: 40px;
+}
+
+.item-row .remove-btn {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .add-btn {
