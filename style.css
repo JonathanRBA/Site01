@@ -96,17 +96,32 @@ textarea {
     padding: 4px 6px;
 }
 
+/* Botão Adicionar igual ao submit */
+.add-btn {
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    background: #27ae60; /* Verde */
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.add-btn:hover {
+    background: #219150;
+}
+
+/* Botão Remover igual ao reset */
 .remove-btn {
     background: #e74c3c;
     color: #fff;
     border: none;
     border-radius: 4px;
-    padding: 4px 10px;
+    padding: 8px 24px;
     cursor: pointer;
-    font-size: 0.95em;
+    font-size: 1em;
     transition: background 0.2s;
 }
-
 .remove-btn:hover {
     background: #c0392b;
 }
