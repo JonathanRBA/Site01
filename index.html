@@ -12,7 +12,7 @@
     <form action="#" method="post">
         <h1 class="form-title">Formulário de Cadastro</h1>
         <p class="form-title">Preencha os campos abaixo para se cadastrar</p>
-       <!-- entrys for user information -->
+        <!-- entrys for user information -->
         <div id="name-input">
             <label for="name">Nome</label>
             <input type="text" id="name" name="name" required>
@@ -29,291 +29,185 @@
             <label for="address">Endereço</label>
             <input type="text" id="address" name="address" required>
         </div>
-    <!-- Entrys for itens  -->
-        <h1>Materiais</h1>
-        <div>
-            <label for="tijolos-quantity">Tijolos</label>
-            <input type="number" id="tijolos-quantity" name="tijolos" required>
+        <!-- Entrys for itens  -->
+        <div class="flex-container">
+            <!-- Materiais -->
+            <div class="flex-item">
+                <h1>Materiais</h1>
+                <label for="material-nome"><strong>Quais serão os materiais utilizados?</strong></label>
+                <div class="input-row">
+                    <input type="text" id="material-nome" placeholder="Nome do material">
+                    <button type="button" id="add-material-btn">Adicionar</button>
+                </div>
+                <div id="materiais-lista"></div>
+                <input type="hidden" id="materiais-json" name="materiais-json">
+            </div>
+            <!-- Ferramentas -->
+            <div class="flex-item">
+                <h1>Ferramentas</h1>
+                <label for="ferramenta-nome"><strong>Quais serão as ferramentas utilizadas?</strong></label>
+                <div class="input-row">
+                    <input type="text" id="ferramenta-nome" placeholder="Nome da ferramenta">
+                    <button type="button" id="add-ferramenta-btn">Adicionar</button>
+                </div>
+                <div id="ferramentas-lista"></div>
+                <input type="hidden" id="ferramentas-json" name="ferramentas-json">
+            </div>
         </div>
-        <div>
-            <label for="areia-quantity">Areia</label>
-            <input type="number" id="areia-quantity" name="areia" required>
-        </div>
-        <div>
-            <label for="cimento-quantity">Cimento</label>
-            <input type="number" id="cimento-quantity" name="cimento" required>
-        </div>
-        <div>
-            <label for="brita-quantity">Quantidade de Brita em M3</label>
-            <input type="number" id="brita-quantity" name="brita" required>
-        </div>
-        <div>
-            <label for="madeira-quantity">Madeira</label>
-            <input type="number" id="madeira-quantity" name="madeira" required>
-        </div>
-        <div>
-            <label for="telhas-quantity">Telhas</label>
-            <input type="number" id="telhas-quantity" name="telhas" required>
-        </div>
-        <div>
-            <label for="pregos-quantity">Pregos</label>
-            <input type="number" id="pregos-quantity" name="pregos" required>
-        </div>
-        <div>
-            <label for="malha-quantity">Malha</label>
-            <input type="number" id="malha-quantity" name="malha" required>
-        </div>
-        <div>
-            <label for="aterro-quantity">Aterro</label>
-            <input type="number" id="aterro-quantity" name="aterro" required>
-        </div>
-        <div>
-            <label for="vergalhao-quantity">Vergalhão</label>
-            <input type="number" id="vergalhao-quantity" name="vergalhao" required>
-        </div>
-        <div>
-            <label for="armacao-quantity">Armação</label>
-            <input type="number" id="armacao-quantity" name="armacao" required>
-        </div>
-        <div>
-            <label for="calha-quantity">Calha</label>
-            <input type="number" id="calha-quantity" name="calha" required>
-        </div>
-        <div>
-            <label for="rufos-quantity">Rufos</label>
-            <input type="number" id="rufos-quantity" name="rufos" required>
-        </div>
-        <!-- entry for Tools to be used -->
-        <h1>Ferramentas</h1>
-
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-pa">
-        Pá
-    </label>
-    <div class="tool-quantity" id="tool-quantity-pa" style="display:none;">
-        <label for="pa-quantity">Quantidade:</label>
-        <input type="number" id="pa-quantity" name="pa-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-enxada">
-        Enxada
-    </label>
-    <div class="tool-quantity" id="tool-quantity-enxada" style="display:none;">
-        <label for="enxada-quantity">Quantidade:</label>
-        <input type="number" id="enxada-quantity" name="enxada-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-carrinho">
-        Carrinho de mão
-    </label>
-    <div class="tool-quantity" id="tool-quantity-carrinho" style="display:none;">
-        <label for="carrinho-quantity">Quantidade:</label>
-        <input type="number" id="carrinho-quantity" name="carrinho-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-nivelador">
-        Nivelador
-    </label>
-    <div class="tool-quantity" id="tool-quantity-nivelador" style="display:none;">
-        <label for="nivelador-quantity">Quantidade:</label>
-        <input type="number" id="nivelador-quantity" name="nivelador-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-prumo">
-        Prumo
-    </label>
-    <div class="tool-quantity" id="tool-quantity-prumo" style="display:none;">
-        <label for="prumo-quantity">Quantidade:</label>
-        <input type="number" id="prumo-quantity" name="prumo-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-martelete">
-        Martelete
-    </label>
-    <div class="tool-quantity" id="tool-quantity-martelete" style="display:none;">
-        <label for="martelete-quantity">Quantidade:</label>
-        <input type="number" id="martelete-quantity" name="martelete-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-martelo">
-        Martelo
-    </label>
-    <div class="tool-quantity" id="tool-quantity-martelo" style="display:none;">
-        <label for="martelo-quantity">Quantidade:</label>
-        <input type="number" id="martelo-quantity" name="martelo-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-betoneira">
-        Betoneira
-    </label>
-    <div class="tool-quantity" id="tool-quantity-betoneira" style="display:none;">
-        <label for="betoneira-quantity">Quantidade:</label>
-        <input type="number" id="betoneira-quantity" name="betoneira-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-espatula">
-        Espátula
-    </label>
-    <div class="tool-quantity" id="tool-quantity-espatula" style="display:none;">
-        <label for="espatula-quantity">Quantidade:</label>
-        <input type="number" id="espatula-quantity" name="espatula-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-colher">
-        Colher de pedreiro
-    </label>
-    <div class="tool-quantity" id="tool-quantity-colher" style="display:none;">
-        <label for="colher-quantity">Quantidade:</label>
-        <input type="number" id="colher-quantity" name="colher-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-desempenadeira">
-        Desempenadeira
-    </label>
-    <div class="tool-quantity" id="tool-quantity-desempenadeira" style="display:none;">
-        <label for="desempenadeira-quantity">Quantidade:</label>
-        <input type="number" id="desempenadeira-quantity" name="desempenadeira-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-linha">
-        Linha de pedreiro
-    </label>
-    <div class="tool-quantity" id="tool-quantity-linha" style="display:none;">
-        <label for="linha-quantity">Quantidade:</label>
-        <input type="number" id="linha-quantity" name="linha-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-esquadro">
-        Esquadro
-    </label>
-    <div class="tool-quantity" id="tool-quantity-esquadro" style="display:none;">
-        <label for="esquadro-quantity">Quantidade:</label>
-        <input type="number" id="esquadro-quantity" name="esquadro-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-trena">
-        Trena
-    </label>
-    <div class="tool-quantity" id="tool-quantity-trena" style="display:none;">
-        <label for="trena-quantity">Quantidade:</label>
-        <input type="number" id="trena-quantity" name="trena-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-serrote">
-        Serrote
-    </label>
-    <div class="tool-quantity" id="tool-quantity-serrote" style="display:none;">
-        <label for="serrote-quantity">Quantidade:</label>
-        <input type="number" id="serrote-quantity" name="serrote-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-makita">
-        Makita
-    </label>
-    <div class="tool-quantity" id="tool-quantity-makita" style="display:none;">
-        <label for="makita-quantity">Quantidade:</label>
-        <input type="number" id="makita-quantity" name="makita-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-alicate">
-        Alicate
-    </label>
-    <div class="tool-quantity" id="tool-quantity-alicate" style="display:none;">
-        <label for="alicate-quantity">Quantidade:</label>
-        <input type="number" id="alicate-quantity" name="alicate-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-serras">
-        Serras
-    </label>
-    <div class="tool-quantity" id="tool-quantity-serras" style="display:none;">
-        <label for="serras-quantity">Quantidade:</label>
-        <input type="number" id="serras-quantity" name="serras-quantity" min="1">
-    </div>
-</div>
-<div class="tool-group">
-    <label>
-        <input type="checkbox" class="tool-checkbox" data-target="tool-quantity-escada">
-        Escada
-    </label>
-    <div class="tool-quantity" id="tool-quantity-escada" style="display:none;">
-        <label for="escada-quantity">Quantidade:</label>
-        <input type="number" id="escada-quantity" name="escada-quantity" min="1">
-    </div>
-</div>
-        
-       <!-- reset and submit buttons -->
-       <div class="form-button">
+        <!-- reset and submit buttons -->
+        <div class="form-button">
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
         </div>
     </form>
     <script>
-document.querySelectorAll('.tool-checkbox').forEach(function(checkbox) {
-    checkbox.addEventListener('change', function() {
-        const target = document.getElementById(this.dataset.target);
-        if (this.checked) {
-            target.style.display = 'block';
-        } else {
-            target.style.display = 'none';
-            target.querySelector('input[type="number"]').value = '';
-        }
-    });
-});
+    // Materiais dinâmicos
+    const materiais = [];
+    const listaMateriais = document.getElementById('materiais-lista');
+    const inputNomeMaterial = document.getElementById('material-nome');
+    const inputJsonMaterial = document.getElementById('materiais-json');
+    document.getElementById('add-material-btn').onclick = function() {
+        const nome = inputNomeMaterial.value.trim();
+        if (!nome) return;
+        const idx = materiais.findIndex(m => m.nome.toLowerCase() === nome.toLowerCase());
+        if (idx !== -1) return; // Evita duplicados
+        const obj = { nome, quantidade: 1 };
+        materiais.push(obj);
 
-document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const formData = new FormData(this);
-    const data = {};
-    formData.forEach((value, key) => {
-        data[key] = value;
+        const div = document.createElement('div');
+        div.className = 'item-row';
+
+        const label = document.createElement('span');
+        label.textContent = nome;
+
+        const inputQtd = document.createElement('input');
+        inputQtd.type = 'number';
+        inputQtd.min = '0.01';
+        inputQtd.step = 'any'; // Permite valores decimais
+        inputQtd.value = '1';
+        inputQtd.className = 'item-quantity';
+        inputQtd.oninput = function() {
+            obj.quantidade = Number(inputQtd.value);
+            atualizarJsonMateriais();
+        };
+
+        const btnRemover = document.createElement('button');
+        btnRemover.type = 'button';
+        btnRemover.textContent = 'Remover';
+        btnRemover.className = 'remove-btn';
+        btnRemover.onclick = function() {
+            listaMateriais.removeChild(div);
+            const i = materiais.indexOf(obj);
+            if (i !== -1) materiais.splice(i, 1);
+            atualizarJsonMateriais();
+        };
+
+        div.appendChild(label);
+        div.appendChild(inputQtd);
+        div.appendChild(btnRemover);
+        listaMateriais.appendChild(div);
+
+        atualizarJsonMateriais();
+        inputNomeMaterial.value = '';
+        inputNomeMaterial.focus();
+    };
+
+    function atualizarJsonMateriais() {
+        inputJsonMaterial.value = JSON.stringify(materiais);
+    }
+
+    // Ferramentas dinâmicas
+    const ferramentas = [];
+    const listaFerramentas = document.getElementById('ferramentas-lista');
+    const inputNomeFerramenta = document.getElementById('ferramenta-nome');
+    const inputJsonFerramenta = document.getElementById('ferramentas-json');
+    document.getElementById('add-ferramenta-btn').onclick = function() {
+        const nome = inputNomeFerramenta.value.trim();
+        if (!nome) return;
+        const idx = ferramentas.findIndex(f => f.nome.toLowerCase() === nome.toLowerCase());
+        if (idx !== -1) return; // Evita duplicados
+        const obj = { nome, quantidade: 1 };
+        ferramentas.push(obj);
+
+        const div = document.createElement('div');
+        div.className = 'item-row';
+
+        const label = document.createElement('span');
+        label.textContent = nome;
+
+        const inputQtd = document.createElement('input');
+        inputQtd.type = 'number';
+        inputQtd.min = '1';
+        inputQtd.value = '1';
+        inputQtd.className = 'item-quantity';
+        inputQtd.oninput = function() {
+            obj.quantidade = Number(inputQtd.value);
+            atualizarJsonFerramentas();
+        };
+
+        const btnRemover = document.createElement('button');
+        btnRemover.type = 'button';
+        btnRemover.textContent = 'Remover';
+        btnRemover.className = 'remove-btn';
+        btnRemover.onclick = function() {
+            listaFerramentas.removeChild(div);
+            const i = ferramentas.indexOf(obj);
+            if (i !== -1) ferramentas.splice(i, 1);
+            atualizarJsonFerramentas();
+        };
+
+        div.appendChild(label);
+        div.appendChild(inputQtd);
+        div.appendChild(btnRemover);
+        listaFerramentas.appendChild(div);
+
+        atualizarJsonFerramentas();
+        inputNomeFerramenta.value = '';
+        inputNomeFerramenta.focus();
+    };
+
+    function atualizarJsonFerramentas() {
+        inputJsonFerramenta.value = JSON.stringify(ferramentas);
+    }
+
+    // Reset limpa listas dinâmicas
+    document.querySelector('form').addEventListener('reset', function() {
+        setTimeout(() => {
+            materiais.length = 0;
+            ferramentas.length = 0;
+            listaMateriais.innerHTML = '';
+            listaFerramentas.innerHTML = '';
+            atualizarJsonMateriais();
+            atualizarJsonFerramentas();
+        }, 0);
     });
 
-    // Gera e baixa o arquivo JSON
-    const blob = new Blob([JSON.stringify(data, null, 2)], {type : 'application/json'});
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'formulario.json';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-});
-</script>
+    // Envio do formulário
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        atualizarJsonMateriais();
+        atualizarJsonFerramentas();
+        const formData = new FormData(this);
+        const data = {};
+        formData.forEach((value, key) => {
+            if (key === 'materiais-json') {
+                data['materiais'] = JSON.parse(value);
+            } else if (key === 'ferramentas-json') {
+                data['ferramentas'] = JSON.parse(value);
+            } else {
+                data[key] = value;
+            }
+        });
+
+        // Gera e baixa o arquivo JSON
+        const blob = new Blob([JSON.stringify(data, null, 2)], {type : 'application/json'});
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'formulario.json';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+    </script>
 </body>
-
 </html>
