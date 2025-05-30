@@ -1,3 +1,6 @@
+/* ===========================
+   BASE / GERAL
+   =========================== */
 body {
     font-family: Arial, sans-serif;
     background: #55cdeb;
@@ -19,6 +22,9 @@ form {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* ===========================
+   CLASSES
+   =========================== */
 .form-title {
     text-align: center;
     margin-bottom: 16px;
@@ -35,10 +41,106 @@ form {
     font-weight: bold;
 }
 
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.flex-item {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.input-row input[type="text"] {
+    height: 40px; /* Ajuste conforme necessário */
+}
+
+.input-row .add-btn {
+    height: 40px; 
+    margin-bottom: 0; 
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.item-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.item-quantity {
+    width: 60px;
+    padding: 4px 6px;
+}
+
+.add-btn {
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    background: #27ae60; 
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.add-btn:hover {
+    background: #219150;
+}
+
+.remove-btn {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 24px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.2s;
+}
+.remove-btn:hover {
+    background: #c0392b;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.tool-group {
+    margin-bottom: 10px;
+}
+.tool-quantity {
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+/* ===========================
+   IDs
+   =========================== */
 #name-input, #email-input, #age-input, #address-input {
+
+
     margin-bottom: 16px;
 }
 
+/* ===========================
+   ELEMENTOS
+   =========================== */
 label {
     display: block;
     margin-bottom: 4px;
@@ -63,81 +165,11 @@ textarea {
     margin-bottom: 12px;
 }
 
-.flex-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
-    margin-bottom: 24px;
-}
-
-.flex-item {
-    flex: 1;
-    background: #f9f9f9;
-    padding: 16px;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-}
-
-.input-row {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
-}
-
-.item-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 6px;
-}
-
-.item-quantity {
-    width: 60px;
-    padding: 4px 6px;
-}
-
-/* Botão Adicionar igual ao submit */
-.add-btn {
-    padding: 8px 24px;
-    border: none;
-    border-radius: 4px;
-    background: #27ae60; /* Verde */
-    color: #fff;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-.add-btn:hover {
-    background: #219150;
-}
-
-/* Botão Remover igual ao reset */
-.remove-btn {
-    background: #e74c3c;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 24px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background 0.2s;
-}
-.remove-btn:hover {
-    background: #c0392b;
-}
-
-.button-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    margin-top: 24px;
-}
-
 input[type="submit"] {
     padding: 8px 24px;
     border: none;
     border-radius: 4px;
-    background: #27ae60; /* Verde */
+    background: #27ae60; 
     color: #fff;
     font-size: 1em;
     cursor: pointer;
@@ -153,7 +185,7 @@ input[type="reset"] {
     padding: 8px 24px;
     border: none;
     border-radius: 4px;
-    background: #e74c3c; /* Vermelho */
+    background: #e74c3c;/* Vermelho */
     color: #fff;
     font-size: 1em;
     cursor: pointer;
@@ -163,13 +195,4 @@ input[type="reset"] {
 
 input[type="reset"]:hover {
     background: #c0392b;
-}
-
-.tool-group {
-    margin-bottom: 10px;
-
-}
-.tool-quantity {
-    margin-left: 25px;
-    margin-top: 5px;
 }
